@@ -33,6 +33,13 @@ select {
   width: 250px;
   box-sizing: border-box;
   height: 30px;
+  outline: none;
+  border: 1px solid #16697a;
+}
+
+form input:focus,
+select:focus {
+  box-shadow: 0px 0px 3px #16697a;
 }
 
 .add-button {
