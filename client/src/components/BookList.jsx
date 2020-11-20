@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery, useLazyQuery } from "@apollo/client";
 import { GET_BOOKS, GET_BOOK } from "../queries/queries";
 import BookDetails from "./BookDetails";
@@ -22,18 +22,21 @@ const BookList = () => {
   if (error) return <p>Error Loading :(</p>;
 
   return (
-    <div>
-      <ul id="book-list">
-        {data.books.map((book) => (
-          <li key={book.id} onClick={() => handleClick(book.id)}>
-            {book.name}
-          </li>
-        ))}
-      </ul>
-      {bookDetails && (
-        <BookDetails book={bookDetails.book} loading={loadingBook} />
-      )}
-    </div>
+    <>
+      <div id="book-list">
+        <ul>
+          {data.books.map((book) => (
+            <li key={book.id} onClick={() => handleClick(book.id)}>
+              {book.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <BookDetails
+        book={bookDetails && bookDetails.book}
+        loading={loadingBook}
+      />
+    </>
   );
 };
 

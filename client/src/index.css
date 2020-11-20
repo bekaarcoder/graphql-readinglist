@@ -1,7 +1,127 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #eeeeee;
   font-family: "Nunito", sans-serif;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+.App {
+  padding: 0px;
+  box-sizing: border-box;
+  width: 60%;
+}
+
+.add-books {
+  display: flex;
+  justify-content: center;
+}
+
+.add-books .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin: 10px auto;
+}
+
+form input,
+select {
+  width: 250px;
+  box-sizing: border-box;
+  height: 30px;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.add-button button {
+  width: 150px;
+  padding: 10px;
+  background: #16697a;
+  color: #ffffff;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-button button:hover {
+  box-shadow: 0px 0px 5px #16697a;
+}
+
+#book-list {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+#book-list ul {
+  width: 85%;
+}
+
+#book-list ul li {
+  list-style-type: none;
+  border: 2px solid #16697a;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #16697a;
+  color: #16697a;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+#book-list ul li:hover {
+  color: #eeeeee;
+  background: #16697a;
+}
+
+.book-detail {
+  width: 40%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #16697a;
+  height: 100%;
+  padding: 20px;
+}
+
+.book-detail h2 {
+  text-align: center;
+  color: #ffffff;
+  margin: 20px auto;
+}
+
+.book-detail .loader,
+.default {
+  text-align: center;
+  color: #eeeeee;
+}
+
+.container {
+  color: #eeeeee;
+}
+
+.container h1,
+h3 {
+  text-align: left;
+}
+
+.container ul {
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.container ul li {
+  list-style-type: disc;
+  color: #eeeeee;
 }

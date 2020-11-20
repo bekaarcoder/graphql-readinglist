@@ -61,7 +61,9 @@ const AddBooks = () => {
             ))}
           </select>
         </div>
-        <button className="btn">Add Book</button>
+        <div className="add-button">
+          <button className="btn">Add Book</button>
+        </div>
       </form>
     </div>
   );
