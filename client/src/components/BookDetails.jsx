@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BookDetails = ({ book, loading }) => {
   return (
     <div className="book-detail">
+      <Link to="/add-author" className="btn-link">
+        Add Author
+      </Link>
       <h2>Book Details</h2>
       {loading ? (
         <p className="loader">Loading detail...</p>

@@ -1,14 +1,16 @@
 import React from "react";
-import AddBooks from "./components/AddBooks";
-import BookList from "./components/BookList";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import AddAuthor from "./components/AddAuthor";
+import HomePage from "./components/HomePage";
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>My Reading List</h1>
-      <AddBooks />
-      <BookList />
-    </div>
+    <Router>
+      <div className="App">
+        <Route path="/add-author" component={AddAuthor} exact />
+        <Route path="/" component={HomePage} exact />
+      </div>
+    </Router>
   );
 };
 

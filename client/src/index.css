@@ -15,12 +15,14 @@ body {
   width: 60%;
 }
 
-.add-books {
+.add-books,
+.add-author {
   display: flex;
   justify-content: center;
 }
 
-.add-books .field {
+.add-books .field,
+.add-author .field {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +93,8 @@ select:focus {
   background: #16697a;
 }
 
-.book-detail {
+.book-detail,
+.author-list {
   width: 40%;
   box-sizing: border-box;
   position: fixed;
@@ -102,7 +105,8 @@ select:focus {
   padding: 20px;
 }
 
-.book-detail h2 {
+.book-detail h2,
+.author-list h2 {
   text-align: center;
   color: #ffffff;
   margin: 20px auto;
@@ -130,5 +134,11 @@ h3 {
 
 .container ul li {
   list-style-type: disc;
+  color: #eeeeee;
+}
+
+.btn-link {
+  padding: 5px 10px;
+  border: 2px solid #eeeeee;
   color: #eeeeee;
 }
